@@ -3,25 +3,25 @@
 // breakpoints without borders
 @mixin b($point) {
 
-  @if $point==desktop {
+  @if $point==laptop {
+    @media (max-width: $mediaWidthDesktop) {
+      @content ;
+    }
+  }
+
+  @else if $point==desktop {
     @media (max-width: $mediaWidthDesktop) {
       @content ;
     }
   }
 
   @else if $point==tablet {
-    @media (max-width: $mediaWidthDesktop) {
-      @content ;
-    }
-  }
-
-  @else if $point==mobile {
     @media (max-width: $mediaWidthTablet) {
       @content ;
     }
   }
 
-  @else if $point==extramobile {
+  @else if $point==mobile {
     @media (max-width: $mediaWidthMobile) {
       @content ;
     }
@@ -46,25 +46,25 @@
 // breakpoints with borders
 @mixin bb($point, $point2: 0) {
 
-  @if $point==desktop {
+  @if $point==laptop {
     @media (max-width: $mediaWidthLaptop) and (min-width: $mediaWidthDesktop) {
       @content ;
     }
   }
 
-  @else if $point==tablet {
+  @else if $point==desktop {
     @media (max-width: $mediaWidthDesktop) and (min-width: $mediaWidthTablet) {
       @content ;
     }
   }
 
-  @else if $point==mobile {
+  @else if $point==tablet {
     @media (max-width: $mediaWidthTablet) and (min-width: $mediaWidthMobile) {
       @content ;
     }
   }
 
-  @else if $point==extramobile {
+  @else if $point==mobile {
     @media (max-width: $mediaWidthMobile) and (min-width: 320px) {
       @content ;
     }

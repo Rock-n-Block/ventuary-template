@@ -1,17 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syncopate:wght@400;700&display=swap');
 @import "../../plugins/normalize.css/normalize";
 @import "../mixins/image.scss";
 @import "../mixins/media";
 @import "../mixins/main";
 
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syncopate:wght@400;700&display=swap');
+
+@include font-face(Syncopate, '../fonts/Syncopate/Syncopate-Bold', bold, normal, ttf);
+@include font-face(Syncopate, '../fonts/Syncopate/Syncopate-Regular', normal, normal, ttf);
+
+@include font-face(Montserrat, '../fonts/Montserrat/Montserrat-Bold', bold, normal, ttf);
+@include font-face(Montserrat, '../fonts/Montserrat/Montserrat-Medium', 500, normal, ttf);
+@include font-face(Montserrat, '../fonts/Montserrat/Montserrat-Regular', normal, normal, ttf);
+
 :root {
-  --color-bg: #353540;
+  --color-bg: #0F0D12;
   --color-title: #929292;
   --color-text: #929292;
-  --color-menu: #929292;
-  --color-menu-hover: #fff;
+  --color-link: #929292;
+  --color-link-hover: #fff;
   --color-orange: #ff8e1e;
   --color-orange-accent: #e17f1d;
+
+  --header-max-width: 1280px;
+  --header-margin: 30px auto 0px auto;
+  --header-padding: 30px 70px 0px 70px;
+  --header-margin-desktop-1: 20px auto 0px auto;
+  --header-padding-desktop-1: 20px 70px 0 70px;
+  --header-margin-desktop: 20px 0px 0px 0px;
+  --header-padding-desktop: 20px 30px 0px 30px;
+  --header-margin-mobile: 15px 0px 0px 0px;
+  --header-padding-mobile: 15px 20px 0px 20px;
 
   --container-max-width: 1200px;
   --container-padding: 20px;
@@ -58,12 +76,30 @@ span {
   outline: none;
 }
 
+.link {
+  color: var(--color-link);
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+a,
+.link {
+  cursor: pointer;
+}
+
 .text {
+  display: block;
+  color: var(--color-text);
   font-size: 16px;
   line-height: 25px;
 }
 
 .title {
+  color: var(--color-title);
+  display: block;
+
   &-text {
     @include rem(25);
     font-weight: 800;
@@ -82,14 +118,12 @@ span {
 }
 
 .logo {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  display: block;
 
   &-hd {
-    background-image: url(../img/logo-hd.svg);
-    width: 133px;
-    height: 60px;
+    background-image: url(../img/logo-hd.svg) no-repeat center/contain;
+    width: 80px;
+    height: 30px;
   }
 
   &-ft {
@@ -126,6 +160,17 @@ span {
 }
 
 .icon {
+  display: flex;
+  align-items: center;
+
+  &-eng {
+    @include before-img(block, 18px, 18px, r) {
+      background-image: url(../img/icons/eng.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
   &-circle {
     &-arrow {
       @include after-img(width=20, height=20) {
