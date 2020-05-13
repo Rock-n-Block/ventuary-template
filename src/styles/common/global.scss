@@ -74,6 +74,7 @@ p,
 span {
   transition: 0.4s ease;
   outline: none;
+  margin: 0;
 }
 
 .link {
@@ -90,7 +91,7 @@ a,
 }
 
 .text {
-  display: block;
+  display: inline-block;
   color: var(--color-text);
   font-size: 16px;
   line-height: 25px;
@@ -98,7 +99,7 @@ a,
 
 .title {
   color: var(--color-title);
-  display: block;
+  display: inline-block;
 
   &-text {
     @include rem(25);
@@ -114,6 +115,17 @@ a,
     font-weight: bold;
     line-height: 69px;
     text-transform: uppercase;
+
+    @include b(desktop) {
+      @include rem(33);
+      line-height: 46px;
+    }
+
+    @include b(mobile) {
+      @include rem(20);
+      line-height: 28px;
+      margin-bottom: 18px;
+    }
   }
 }
 
@@ -131,10 +143,6 @@ a,
     width: 133px;
     height: 60px;
   }
-}
-
-.section {
-  padding: var(--section-padding);
 }
 
 .container {
