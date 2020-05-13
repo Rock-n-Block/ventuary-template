@@ -1,0 +1,16 @@
+SECTION.block.block-reaching
+  DIV.container-content
+    DIV.container-content-wrap
+      DIV.block-text
+        H2.text.text-title
+          | Reaching
+          |
+          | consensus
+        P.text How can we make sure that data provided by Gravity Hub is accurate? That can be achieved by consensus between several nodes.
+        P.text One option is a multi-signature solution, whereby a transaction containing the consensus data must be signed by all nodes.
+      DIV.block-image
+        img.block-image-wrap(src='../img/reaching_consensus-2.png', alt='watching data')
+        DIV.block-image-text
+          DIV.block-image-text-wrap
+            P.text Alternatively, any node could be allowed to send consensus data to the user, but in that case, the node’s stake will act as collateral. If, for instance, a node sends data to the target blockchain that is different from the ultimate consensus data, proof of that can be sent to a smart contract, which will automatically deduct part of the node’s stake as a fine.
+            P.text A user will be able to request a certain type of data over a specific time period for a fee consisting of execution costs and the node’s fee. Also, the user will be able to set up preferences. For example, when requesting exchange rate data, the user can set the maximum variability required.
