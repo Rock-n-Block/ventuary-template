@@ -27,6 +27,12 @@
 
         &-text {
           margin-bottom: 20px;
+
+          @include b(tablet) {
+            br {
+              display: none;
+            }
+          }
         }
       }
 
@@ -77,6 +83,10 @@
       }
 
       &:nth-child(4) {
+        @include b(tablet) {
+          margin-bottom: 0;
+        }
+
         .section-first-item-img {
           background-image: url(../img/points.svg), url(../img/deployment.svg) no-repeat center/40%;
 

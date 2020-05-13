@@ -7,8 +7,8 @@
     }
 
     .container {
-      max-width: 900px;
-      padding: 70px 20px 45px 20px;
+      max-width: 920px;
+      padding: 70px 20px 40px 20px;
       background: url(../img/header-points.svg), url(../img/header-lines.svg) no-repeat right center/contain;
 
       @include b(mobile) {

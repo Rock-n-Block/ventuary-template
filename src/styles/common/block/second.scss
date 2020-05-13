@@ -1,0 +1,195 @@
+.section {
+  &-second {
+    margin-top: 80px;
+
+    @include b(mobile) {
+      margin-top: 0px;
+    }
+
+    .container {
+      max-width: 1100px;
+
+      .title {
+        &-lg {
+          margin-bottom: 50px;
+          position: relative;
+
+          @include after-img(block, 400px, 330px, a) {
+            background-image: url(../img/points.svg);
+            top: -100px;
+
+            @include b(desktop) {
+              width: 325px;
+              height: 245px;
+              background-size: cover;
+              top: -80px;
+            }
+
+            @include b(mobile) {
+              display: none;
+            }
+          }
+
+          @include b(mobile) {
+            margin-bottom: 20px;
+          }
+        }
+
+        &-text {
+          margin-bottom: 20px;
+        }
+      }
+
+      .text {
+        margin-bottom: 15px;
+
+        @include b(mobile) {
+          @include rem(14);
+          line-height: 20px;
+        }
+      }
+
+      .link {
+        &:hover {
+          &:after {
+            transition: 0.4s ease;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    &-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 90px;
+      grid-template-areas: 'img info';
+      height: 315px;
+      align-items: center;
+      margin-bottom: 80px;
+
+      @include b(tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+      }
+
+      &:nth-child(2) {
+        .section-second-item-img {
+          background: url(../img/gravity-hub-logo-2.svg) no-repeat 50px 50px/12%, url(../img/gravity-hub-logo.svg) no-repeat center/25%, url(../img/gravity-hub-products-bg.png) no-repeat center/contain;
+
+          @include b(tablet) {
+            background: url(../img/gravity-hub-logo-2.svg) no-repeat 20px 20px/15%, url(../img/gravity-hub-logo.svg) no-repeat center/25%, url(../img/gravity-hub-products-bg.png) no-repeat center/cover;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .section-second-item-img {
+          background-image: url(../img/neutrino-product.svg) no-repeat center/contain;
+
+          @include b(tablet) {
+            background: url(../img/neutrino-product-mob.svg) no-repeat center/contain;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .section-second-item-img {
+          background-image: url(../img/ventuary-dao-product.svg) no-repeat center/contain;
+
+          @include b(tablet) {
+            background: url(../img/ventuary-dao-product-mob.svg) no-repeat center/contain;
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        .section-second-item-img {
+          background-image: url(../img/susy-product.svg) no-repeat center/contain;
+
+          @include b(tablet) {
+            background: url(../img/susy-product-mob.svg) no-repeat center/contain;
+          }
+        }
+      }
+
+      &:nth-child(6) {
+
+        @include b(tablet) {
+          margin-bottom: 0px;
+        }
+
+        .section-second-item-img {
+          background-image: url(../img/web3-product.svg) no-repeat center/contain;
+
+          @include b(tablet) {
+            background: url(../img/web3-product-mob.svg) no-repeat center/contain;
+          }
+        }
+      }
+
+      &.item-reverce {
+        grid-template-areas: 'info img';
+
+        @include b(tablet) {
+          grid-template-areas: 'info''img';
+        }
+      }
+
+      &.item-duo {
+        grid-template-areas: 'info info''img img';
+        height: auto;
+        grid-gap: 20px;
+
+        @include b(tablet) {
+          grid-template-areas: 'info''img';
+        }
+
+        .section-second-item-img {
+          padding-bottom: 39%;
+
+          @include b(tablet) {
+            padding-bottom: 60%;
+          }
+        }
+      }
+
+      &-info {
+        grid-area: info;
+
+        @include b(tablet) {
+          margin-bottom: 20px;
+        }
+
+        &-wrap {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 30px;
+
+          @include b(tablet) {
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+          }
+
+        }
+      }
+
+      &-img {
+        grid-area: img;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 5px;
+        height: 100%;
+
+        @include b(tablet) {
+          padding-bottom: 45.7%;
+        }
+
+        @include b(mobile) {
+          padding-bottom: 45%;
+        }
+      }
+    }
+  }
+}
