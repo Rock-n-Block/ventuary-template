@@ -1,0 +1,105 @@
+.section {
+  &-third {
+    margin-top: 80px;
+
+    @include b(mobile) {
+      margin-top: 0px;
+    }
+
+    .container {
+      max-width: 990px;
+
+      .title {
+        &-lg {
+          margin-bottom: 80px;
+          position: relative;
+
+          @include after-img(block, 400px, 330px, a) {
+            background-image: url(../img/points.svg);
+            top: -100px;
+
+            @include b(desktop) {
+              width: 325px;
+              height: 245px;
+              background-size: cover;
+              top: -80px;
+            }
+
+            @include b(mobile) {
+              display: none;
+            }
+          }
+
+          @include b(mobile) {
+            margin-bottom: 20px;
+          }
+        }
+
+        &-text {
+          margin-bottom: 20px;
+        }
+
+        @include b(mobile) {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include b(650) {
+        justify-content: space-evenly;
+        margin: 0 0 0 -20px;
+      }
+
+      @include b(mobile) {
+        justify-content: space-evenly;
+        margin: 0 -20px;
+      }
+
+      * {
+        padding-right: 70px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-right: 0.5px solid #585858;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Syncopate',
+          sans-serif;
+        color: var(--color-text);
+        @include rem(10);
+
+        @include b(990) {
+          padding-right: 6.5%;
+        }
+
+        @include b(990) {
+          padding-right: 6.5%;
+        }
+
+        @include b(tablet) {
+          padding-right: 5.5%;
+        }
+
+        @include b(650) {
+          padding-right: 0;
+          border-right: none;
+          width: 90px;
+        }
+
+        &:nth-last-child(1) {
+          border-right: none;
+          padding: 0;
+          margin-right: 0;
+          width: 120px;
+        }
+
+      }
+    }
+  }
+}

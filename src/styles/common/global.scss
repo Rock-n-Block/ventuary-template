@@ -176,6 +176,72 @@ a,
   display: flex;
   align-items: center;
 
+  &-waves-2 {
+    flex-direction: column;
+
+    @include before-img(block, 60px, 60px, r) {
+      background-image: url(../img/icons/waves-logo.svg);
+      background-position: center;
+      background-size: contain;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-ethereum {
+    flex-direction: column;
+
+    @include before-img(block, 39px, 60px, r) {
+      background-image: url(../img/icons/ethereum-logo.svg);
+      background-position: center;
+      background-size: contain;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-reactjs {
+    flex-direction: column;
+
+    @include before-img(block, 70px, 61px, r) {
+      background-image: url(../img/icons/reactjs-logo.svg);
+      background-position: center;
+      background-size: contain;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-solidity {
+    flex-direction: column;
+
+    @include before-img(block, 40px, 60px, r) {
+      background-image: url(../img/icons/solidity-logo.svg);
+      background-position: center;
+      background-size: contain;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-ride {
+    flex-direction: column;
+
+    @include before-img(block, 113px, 40px, r) {
+      background-image: url(../img/icons/ride-logo.svg);
+      background-position: center;
+      background-size: contain;
+      margin-bottom: 25px;
+    }
+  }
+
+  &-waves {
+    flex-direction: column;
+
+    @include before-img(block, 60px, 60px, r) {
+      background-image: url(../img/icons/waves-logo.svg);
+      background-position: center;
+      background-size: contain;
+      margin-bottom: 10px;
+    }
+  }
+
   &-eng {
     @include before-img(block, 18px, 18px, r) {
       background-image: url(../img/icons/eng.svg);
