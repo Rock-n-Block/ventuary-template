@@ -12,31 +12,10 @@
       .title {
         &-lg {
           margin-bottom: 50px;
-          position: relative;
-
-          @include after-img(block, 400px, 330px, a) {
-            background-image: url(../img/points.svg);
-            top: -100px;
-
-            @include b(desktop) {
-              width: 325px;
-              height: 245px;
-              background-size: cover;
-              top: -80px;
-            }
-
-            @include b(mobile) {
-              display: none;
-            }
-          }
 
           @include b(mobile) {
             margin-bottom: 20px;
           }
-        }
-
-        &-text {
-          margin-bottom: 20px;
         }
       }
 

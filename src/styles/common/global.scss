@@ -106,6 +106,7 @@ a,
     font-weight: 800;
     line-height: 30px;
     letter-spacing: 1.3px;
+    margin-bottom: 20px;
 
     @include b(mobile) {
       @include rem(20);
@@ -120,6 +121,7 @@ a,
     font-weight: bold;
     line-height: 69px;
     text-transform: uppercase;
+    position: relative;
 
     @include b(desktop) {
       @include rem(33);
@@ -130,6 +132,31 @@ a,
       @include rem(20);
       line-height: 28px;
       margin-bottom: 18px;
+    }
+  }
+
+  &-bg {
+    @include after-img(block, 400px, 330px, a) {
+      background-image: url(../img/points.svg);
+      top: -100px;
+      z-index: -1;
+
+      @include b(desktop) {
+        width: 325px;
+        height: 245px;
+        background-size: cover;
+        top: -80px;
+      }
+
+      @include b(mobile) {
+        display: none;
+      }
+    }
+  }
+
+  @include b(mobile) {
+    br {
+      display: none;
     }
   }
 }

@@ -3,7 +3,7 @@
 ### versions
 
 - `node v12.16.0`
-- `(npm v6.13.4)`
+- `npm v6.13.4`
 
 ### usage
 
