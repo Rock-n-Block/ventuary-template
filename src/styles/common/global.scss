@@ -5,15 +5,35 @@
 
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syncopate:wght@400;700&display=swap');
 
-@include font-face(Syncopate, '../fonts/Syncopate/Syncopate-Bold', bold, normal, ttf);
-@include font-face(Syncopate, '../fonts/Syncopate/Syncopate-Regular', normal, normal, ttf);
+@include font-face(Syncopate,
+  "../fonts/Syncopate/Syncopate-Bold",
+  bold,
+  normal,
+  ttf);
+@include font-face(Syncopate,
+  "../fonts/Syncopate/Syncopate-Regular",
+  normal,
+  normal,
+  ttf);
 
-@include font-face(Montserrat, '../fonts/Montserrat/Montserrat-Bold', bold, normal, ttf);
-@include font-face(Montserrat, '../fonts/Montserrat/Montserrat-Medium', 500, normal, ttf);
-@include font-face(Montserrat, '../fonts/Montserrat/Montserrat-Regular', normal, normal, ttf);
+@include font-face(Montserrat,
+  "../fonts/Montserrat/Montserrat-Bold",
+  bold,
+  normal,
+  ttf);
+@include font-face(Montserrat,
+  "../fonts/Montserrat/Montserrat-Medium",
+  500,
+  normal,
+  ttf);
+@include font-face(Montserrat,
+  "../fonts/Montserrat/Montserrat-Regular",
+  normal,
+  normal,
+  ttf);
 
 :root {
-  --color-bg: #0F0D12;
+  --color-bg: #0f0d12;
   --color-title: #929292;
   --color-text: #929292;
   --color-link: #929292;
@@ -55,8 +75,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--color-bg);
-  font-family: 'Montserrat',
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   cursor: default;
 }
 
@@ -116,12 +135,12 @@ a,
   padding: 20px 0px;
   outline: none;
   margin: 0;
+  border-radius: 0px;
   margin-bottom: 10px;
   border: none;
   box-shadow: none;
   border-bottom: 1px solid #474652;
-  font-family: 'Montserrat',
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   transition: 0.4s ease;
 
   @include b(mobile) {
@@ -166,8 +185,7 @@ a,
 
   &-lg {
     @include rem(46);
-    font-family: 'Syncopate',
-      sans-serif;
+    font-family: "Syncopate", sans-serif;
     font-weight: bold;
     line-height: 69px;
     text-transform: uppercase;
@@ -222,8 +240,10 @@ a,
 
   &-ft {
     background-image: url(../img/logo-ft.svg);
-    width: 133px;
-    height: 60px;
+    width: 105px;
+    height: 64px;
+    display: flex;
+    background-repeat: no-repeat;
   }
 }
 
@@ -382,6 +402,70 @@ a,
       }
     }
   }
+
+  &-facebook {
+    @include after-img(block, 14px, 25px, r) {
+      background-image: url(../img/icons/facebook.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-medium {
+    @include after-img(block, 26px, 20px, r) {
+      background-image: url(../img/icons/medium.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-twitter {
+    @include after-img(block, 26px, 21px, r) {
+      background-image: url(../img/icons/twitter.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-linkedin {
+    @include after-img(block, 24px, 24px, r) {
+      background-image: url(../img/icons/linkedin.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-youtube {
+    @include after-img(block, 30px, 22px, r) {
+      background-image: url(../img/icons/youtube.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-discord {
+    @include after-img(block, 24px, 26px, r) {
+      background-image: url(../img/icons/discord.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-reddit {
+    @include after-img(block, 28px, 27px, r) {
+      background-image: url(../img/icons/reddit.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-github {
+    @include after-img(block, 27px, 27px, r) {
+      background-image: url(../img/icons/github.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
 }
 
 .btn {
@@ -398,12 +482,92 @@ a,
     border: 1px solid #474652;
     transition: 0.4s ease;
     @include rem(10);
-    font-family: 'Syncopate',
-      sans-serif;
+    font-family: "Syncopate", sans-serif;
 
     &:hover {
       color: white;
       border-color: white;
+    }
+  }
+}
+
+.page-lang {
+  color: var(--color-text);
+  position: relative;
+  @include rem(10);
+  font-family: 'Syncopate',
+    sans-serif;
+  font-weight: normal;
+
+  &:hover {
+    .page-lang-select-list {
+      display: flex !important;
+    }
+  }
+
+  .icon {
+    &:before {
+      margin-right: 6px;
+    }
+  }
+
+  &-select {
+    &-list {
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      margin-top: 10px;
+      background-color: rgba(18, 18, 25, 0.98);
+      border: 1px solid #676577;
+      border-radius: 5px;
+      padding: 10px 15px;
+      position: absolute;
+      top: 40px;
+      left: 0px;
+      min-width: 95px;
+      z-index: 20;
+
+      &:hover {
+        display: flex !important;
+      }
+
+      &-title {
+        margin: 8px 0;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-selected {
+    border: 1px solid #676577;
+    padding: 10px 10px;
+    border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-width: 2px 2px 0px 0px;
+      border-style: solid;
+      border-color: white;
+      transform: rotate(135deg);
+      position: absolute;
+      top: 4px;
+      right: -5px;
+      transition: 0.2s ease;
+    }
+
+    &.opened {
+      &:after {
+        transform: rotate(-45deg);
+        top: 8px;
+      }
     }
   }
 }

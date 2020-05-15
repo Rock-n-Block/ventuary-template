@@ -1,5 +1,136 @@
 @import "../mixins/media";
 
 footer {
-  .container {}
+  margin-bottom: 50px;
+
+  .container {
+    max-width: var(--container-max-width);
+    padding: 50px 70px;
+
+    @include b(desktop) {
+      padding: 50px 40px;
+    }
+
+    @include b(mobile) {
+      padding: 50px 20px;
+    }
+
+    .logo-ft {
+      margin-bottom: 20px;
+      position: relative;
+
+      @include before-img(block, 340px, 260px, a) {
+        background-image: url(../img/points.svg);
+        top: -60px;
+        left: -70px;
+        z-index: -1;
+        background-position: center;
+        background-size: cover;
+
+        @include b(desktop) {
+          width: 325px;
+          height: 245px;
+          background-size: cover;
+          top: -80px;
+        }
+
+        @include b(mobile) {
+          display: none;
+        }
+      }
+    }
+
+    .copyrate {
+      @include rem(10);
+      margin-top: 55px;
+      font-family: "Syncopate",
+        sans-serif;
+      opacity: 0.6;
+    }
+  }
+
+  .footer {
+    &-email {
+      text-transform: uppercase;
+      @include rem(16);
+      font-family: "Syncopate",
+        sans-serif;
+
+      @include b(mobile) {
+        @include rem(14);
+      }
+    }
+
+    &-social-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+
+      @include b(mobile) {
+        display: grid;
+        grid-template-columns: repeat(4, 30px);
+        justify-content: space-between;
+        grid-gap: 40px;
+      }
+    }
+
+    &-links {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 95px minmax(320px, 700px);
+      grid-gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+
+      @include b(mobile) {
+        display: flex;
+        width: 100%;
+      }
+
+      .page-lang {
+
+        @include b(mobile) {
+          display: none;
+        }
+
+        &-select-list {
+          top: -175px;
+        }
+      }
+    }
+
+    &-menu {
+      display: flex;
+      margin-top: 60px;
+      justify-content: space-between;
+      @include rem(12);
+      font-family: "Syncopate",
+        sans-serif;
+
+      @include b(700) {
+        display: none;
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+      }
+
+      * {
+        color: var(--color-text);
+      }
+
+      &-title {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .link {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
