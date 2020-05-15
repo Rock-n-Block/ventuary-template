@@ -16,7 +16,72 @@
           @include b(mobile) {
             margin-bottom: 20px;
           }
+
+          &:after {
+            margin-bottom: 5px;
+          }
         }
+      }
+    }
+
+    &-items {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -10px;
+    }
+
+    &-item {
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 5px;
+      border: 1px solid #2B292C;
+      padding: 50px 30px 40px 30px;
+      max-width: 333px;
+      width: 100%;
+      min-height: 340px;
+      margin: 0 10px;
+
+      @include b(900) {
+        max-width: 50%;
+      }
+
+      @include b(mobile) {
+        max-width: 100%;
+      }
+
+      &:nth-child(2) {
+        @include b(mobile) {
+          display: none;
+        }
+      }
+
+      &:nth-child(3) {
+        @include b(900) {
+          display: none;
+        }
+      }
+
+      .text,
+      .title {
+        width: 100%;
+      }
+
+      &-center {
+        width: 100%;
+      }
+
+      &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      .link {
+        width: max-content;
+        text-decoration: underline;
+        @include rem(14);
       }
     }
   }

@@ -22,8 +22,8 @@
   --color-orange-accent: #e17f1d;
 
   --header-max-width: 1280px;
-  --header-margin: 30px auto 0px auto;
-  --header-padding: 30px 70px 0px 70px;
+  --header-margin: 0 auto;
+  --header-padding: 60px 70px 0px 70px;
   --header-margin-desktop-1: 20px auto 0px auto;
   --header-padding-desktop-1: 20px 70px 0 70px;
   --header-margin-desktop: 20px 0px 0px 0px;
@@ -88,6 +88,15 @@ span {
 a,
 .link {
   cursor: pointer;
+
+  &.icon {
+    &:hover {
+      &:after {
+        transition: 0.4s ease;
+        opacity: 0.7;
+      }
+    }
+  }
 }
 
 .text {
@@ -136,7 +145,7 @@ a,
   }
 
   &-bg {
-    @include after-img(block, 400px, 330px, a) {
+    @include before-img(block, 400px, 330px, a) {
       background-image: url(../img/points.svg);
       top: -100px;
       z-index: -1;
@@ -278,6 +287,15 @@ a,
   }
 
   &-circle {
+    &-arrow-gray {
+      @include after-img(block, 36px, 36px, r) {
+        background-image: url(../img/icons/icon-circle-arrow-gray.svg);
+        background-position: center;
+        background-size: contain;
+        margin-left: 15px;
+      }
+    }
+
     &-arrow-brown {
       @include after-img(block, 36px, 36px, r) {
         background-image: url(../img/icons/icon-circle-arrow-brown.svg);
