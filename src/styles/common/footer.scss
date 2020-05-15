@@ -43,8 +43,7 @@ footer {
     .copyrate {
       @include rem(10);
       margin-top: 55px;
-      font-family: "Syncopate",
-        sans-serif;
+      font-family: "Syncopate", sans-serif;
       opacity: 0.6;
     }
   }
@@ -53,8 +52,7 @@ footer {
     &-email {
       text-transform: uppercase;
       @include rem(16);
-      font-family: "Syncopate",
-        sans-serif;
+      font-family: "Syncopate", sans-serif;
 
       @include b(mobile) {
         @include rem(14);
@@ -90,7 +88,6 @@ footer {
       }
 
       .page-lang {
-
         @include b(mobile) {
           display: none;
         }
@@ -106,8 +103,7 @@ footer {
       margin-top: 60px;
       justify-content: space-between;
       @include rem(12);
-      font-family: "Syncopate",
-        sans-serif;
+      font-family: "Syncopate", sans-serif;
 
       @include b(700) {
         display: none;
