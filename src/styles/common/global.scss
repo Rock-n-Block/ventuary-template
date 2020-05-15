@@ -99,6 +99,60 @@ a,
   }
 }
 
+.form-block {
+  &-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.input,
+.textarea {
+  @include rem(16);
+  color: var(--color-text);
+  background: none;
+  width: 100%;
+  padding: 20px 0px;
+  outline: none;
+  margin: 0;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid #474652;
+  font-family: 'Montserrat',
+    sans-serif;
+  transition: 0.4s ease;
+
+  @include b(mobile) {
+    @include rem(14);
+  }
+
+  &:focus {
+    color: white;
+    border-color: white;
+  }
+}
+
+.form-button {
+  max-width: 130px;
+  width: 100%;
+  padding: 10px;
+  text-transform: lowercase;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid #474652;
+  transition: 0.4s ease;
+  @include rem(10);
+  font-family: 'Syncopate',
+    sans-serif;
+
+  &:hover {
+    color: white;
+    border-color: white;
+  }
+}
+
 .text {
   display: inline-block;
   color: var(--color-text);

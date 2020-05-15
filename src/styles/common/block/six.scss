@@ -1,0 +1,21 @@
+.section {
+  &-six {
+    margin-top: 100px;
+
+    @include b(mobile) {
+      margin-top: 0px;
+    }
+
+    .container {
+      max-width: 960px;
+
+      .title {
+        margin-bottom: 20px;
+      }
+    }
+
+    .form-block {
+      max-width: 615px;
+    }
+  }
+}
