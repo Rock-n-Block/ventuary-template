@@ -102,7 +102,7 @@ a,
 .text {
   display: inline-block;
   color: var(--color-text);
-  font-size: 16px;
+  @include rem(16);
   line-height: 25px;
 }
 
