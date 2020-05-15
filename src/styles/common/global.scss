@@ -31,7 +31,7 @@
   --header-margin-mobile: 15px 0px 0px 0px;
   --header-padding-mobile: 15px 20px 0px 20px;
 
-  --container-max-width: 1200px;
+  --container-max-width: 1280px;
   --container-padding: 20px;
   --container-padding-laptop: 20px 20px;
   --container-padding-desktop: 20px 20px;
@@ -137,20 +137,7 @@ a,
 .form-button {
   max-width: 130px;
   width: 100%;
-  padding: 10px;
   text-transform: lowercase;
-  background: none;
-  border-radius: 5px;
-  border: 1px solid #474652;
-  transition: 0.4s ease;
-  @include rem(10);
-  font-family: 'Syncopate',
-    sans-serif;
-
-  &:hover {
-    color: white;
-    border-color: white;
-  }
 }
 
 .text {
@@ -402,12 +389,21 @@ a,
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-text);
 
-  &-orange {
-    background-color: var(--color-orange);
+  &-border {
+    padding: 10px 20px;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid #474652;
+    transition: 0.4s ease;
+    @include rem(10);
+    font-family: 'Syncopate',
+      sans-serif;
 
     &:hover {
-      background-color: var(--color-orange-accent);
+      color: white;
+      border-color: white;
     }
   }
 }

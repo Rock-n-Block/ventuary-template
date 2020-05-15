@@ -1,0 +1,33 @@
+.section {
+  &-cookies {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    padding: 0 20px;
+
+    .container {
+      max-width: var(--container-max-width);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      border: 1px solid #474652;
+      background-color: var(--color-bg);
+
+      .text {
+        @include rem(12);
+        line-height: 1.5;
+      }
+
+      .link {
+        text-decoration: underline;
+      }
+
+      .btn {
+        margin-left: 30px;
+        max-width: 95px;
+        width: 100%;
+      }
+    }
+  }
+}
