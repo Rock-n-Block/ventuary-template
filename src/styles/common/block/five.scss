@@ -1,0 +1,27 @@
+.section {
+  &-five {
+    margin-top: 80px;
+
+    @include b(mobile) {
+      margin-top: 0px;
+    }
+
+    .container {
+      max-width: 1100px;
+
+      .title {
+        &-lg {
+          margin-bottom: 80px;
+
+          @include b(mobile) {
+            margin-bottom: 20px;
+          }
+
+          &:after {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
