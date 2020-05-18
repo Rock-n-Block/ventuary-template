@@ -42,44 +42,45 @@
         display: flex;
         flex-direction: column-reverse;
         height: auto;
+        margin-bottom: 30px;
       }
 
       &:nth-child(2) {
         .section-second-item-img {
-          background: url(../img/gravity-hub-logo-2.svg) no-repeat 50px 50px/12%, url(../img/gravity-hub-logo.svg) no-repeat center/25%, url(../img/gravity-hub-products-bg.png) no-repeat center/contain;
+          background: url(../img/gravity-hub-products.png) no-repeat center/contain;
 
           @include b(tablet) {
-            background: url(../img/gravity-hub-logo-2.svg) no-repeat 20px 20px/15%, url(../img/gravity-hub-logo.svg) no-repeat center/25%, url(../img/gravity-hub-products-bg.png) no-repeat center/cover;
+            background: url(../img/gravity-hub-products-mob.png) no-repeat center/cover;
           }
         }
       }
 
       &:nth-child(3) {
         .section-second-item-img {
-          background-image: url(../img/neutrino-product.svg) no-repeat center/contain;
+          background-image: url(../img/neutrino-product.png) no-repeat center/contain;
 
           @include b(tablet) {
-            background: url(../img/neutrino-product-mob.svg) no-repeat center/contain;
+            background: url(../img/neutrino-product-mob.png) no-repeat center/contain;
           }
         }
       }
 
       &:nth-child(4) {
         .section-second-item-img {
-          background-image: url(../img/ventuary-dao-product.svg) no-repeat center/contain;
+          background-image: url(../img/ventuary-dao-product.png) no-repeat center/contain;
 
           @include b(tablet) {
-            background: url(../img/ventuary-dao-product-mob.svg) no-repeat center/contain;
+            background: url(../img/ventuary-dao-product-mob.png) no-repeat center/contain;
           }
         }
       }
 
       &:nth-child(5) {
         .section-second-item-img {
-          background-image: url(../img/susy-product.svg) no-repeat center/contain;
+          background-image: url(../img/susy-product.png) no-repeat center/contain;
 
           @include b(tablet) {
-            background: url(../img/susy-product-mob.svg) no-repeat center/contain;
+            background: url(../img/susy-product-mob.png) no-repeat center/contain;
           }
         }
       }
@@ -91,10 +92,10 @@
         }
 
         .section-second-item-img {
-          background-image: url(../img/web3-product.svg) no-repeat center/contain;
+          background-image: url(../img/web3-product.png) no-repeat center/contain;
 
           @include b(tablet) {
-            background: url(../img/web3-product-mob.svg) no-repeat center/contain;
+            background: url(../img/web3-product-mob.png) no-repeat center/contain;
           }
         }
       }
