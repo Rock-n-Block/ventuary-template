@@ -55,22 +55,122 @@ header {
       @include b(mobile) {
         position: absolute;
         display: none;
-        flex-direction: column-reverse;
-        width: 95vw;
+        flex-direction: column;
+        width: 100%;
         left: 0;
         right: 0;
-        padding: 20px;
+        padding: 20px 30px 40px 30px;
         margin: 0 auto;
-        top: 80px;
-        border-radius: 5px;
-        border: 1px solid #929292;
-        background-color: var(--color-bg);
+        background-color: #17151B;
+        top: 0;
+        overflow-y: scroll;
+        height: 96vh;
+      }
+
+      .btn-close {
+        display: none;
+
+        @include b(mobile) {
+          display: block;
+        }
+      }
+
+      .page-lang {
+        &-select {
+          @include b(mobile) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px 0;
+          }
+
+          &-list {
+            @include b(mobile) {
+              display: flex;
+              flex-direction: row;
+              position: relative;
+              margin: 0 10px;
+              padding: 0px 0px;
+              top: 0;
+              max-width: 100%;
+              width: max-content;
+              border: none;
+              background: none;
+              flex-wrap: wrap;
+            }
+
+            &-title {
+              @include b(mobile) {
+                margin: 10px 15px;
+                width: max-content;
+                cursor: pointer;
+              }
+            }
+          }
+
+          &-selected {
+            @include b(mobile) {
+              width: max-content;
+              padding: 10px 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &-footer {
+      display: none;
+
+      @include b(mobile) {
+        display: block;
+        margin-top: 30px;
+      }
+
+      .footer {
+        &-email {
+          text-transform: uppercase;
+          @include rem(14);
+          font-family: "Syncopate", sans-serif;
+          margin-top: 20px;
+          display: block;
+        }
+
+        &-social-links {
+          align-items: center;
+          width: 100%;
+
+          display: grid;
+          grid-template-columns: repeat(4, 30px);
+          justify-content: space-between;
+          grid-gap: 40px;
+        }
+
+        &-links {
+          margin-bottom: 50px;
+          justify-content: space-between;
+          align-items: center;
+
+          display: flex;
+          width: 100%;
+        }
+      }
+
+      .copyrate {
+        @include rem(10);
+        margin-top: 20px;
+        font-family: "Syncopate", sans-serif;
+        opacity: 0.6;
+        line-height: 18px;
       }
     }
 
     &-menu {
       display: flex;
       align-items: center;
+
+      @include b(mobile) {
+        flex-direction: column;
+        align-items: baseline;
+      }
 
       &-link {
         @include rem(12);
@@ -82,6 +182,12 @@ header {
 
         @include b(tablet) {
           font-size: 1.55vw;
+        }
+
+        @include b(mobile) {
+          @include rem(14);
+          margin: 10px 0;
+          font-weight: bold;
         }
 
         &:hover {
@@ -104,6 +210,10 @@ header {
           @include b(tablet) {
             margin: 0 10px;
           }
+
+          @include b(mobile) {
+            display: none;
+          }
         }
 
         &:nth-last-child(1) {
@@ -122,12 +232,18 @@ header {
             position: absolute;
             width: 50px;
             height: 1px;
+
+            @include b(mobile) {
+              display: none;
+            }
           }
         }
       }
 
       &-show {
-        display: flex !important;
+        @include b(mobile) {
+          display: flex !important;
+        }
       }
 
       &-toggle {

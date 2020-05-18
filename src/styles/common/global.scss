@@ -5,42 +5,32 @@
 
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syncopate:wght@400;700&display=swap');
 
-@include font-face(
-  Syncopate,
+@include font-face(Syncopate,
   "../fonts/Syncopate/Syncopate-Bold",
   bold,
   normal,
-  ttf
-);
-@include font-face(
-  Syncopate,
+  ttf);
+@include font-face(Syncopate,
   "../fonts/Syncopate/Syncopate-Regular",
   normal,
   normal,
-  ttf
-);
+  ttf);
 
-@include font-face(
-  Montserrat,
+@include font-face(Montserrat,
   "../fonts/Montserrat/Montserrat-Bold",
   bold,
   normal,
-  ttf
-);
-@include font-face(
-  Montserrat,
+  ttf);
+@include font-face(Montserrat,
   "../fonts/Montserrat/Montserrat-Medium",
   500,
   normal,
-  ttf
-);
-@include font-face(
-  Montserrat,
+  ttf);
+@include font-face(Montserrat,
   "../fonts/Montserrat/Montserrat-Regular",
   normal,
   normal,
-  ttf
-);
+  ttf);
 
 :root {
   --color-bg: #0f0d12;
@@ -357,6 +347,14 @@ a,
     }
   }
 
+  &-rus {
+    @include before-img(block, 18px, 18px, r) {
+      background-image: url(../img/icons/rus.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
   &-circle {
     &-arrow-gray {
       @include after-img(block, 36px, 36px, r) {
@@ -497,6 +495,42 @@ a,
     &:hover {
       color: white;
       border-color: white;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+
+    &:hover {
+      * {
+        background-color: white;
+      }
+    }
+
+    &-item {
+      width: 100%;
+      display: block;
+      height: 2px;
+      border-radius: 10px;
+      background-color: #929292;
+      margin-bottom: 5px;
+      transition: 0.4s ease;
+
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+        margin: 0;
+        margin-bottom: -2px;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+        margin: 0;
+        max-width: 100%;
+      }
     }
   }
 }
