@@ -223,6 +223,13 @@ header {
         }
 
         &.active {
+          &:hover {
+            &:before {
+              width: 60px;
+              background-color: #fff;
+            }
+          }
+
           &:before {
             content: '';
             display: block;
@@ -230,8 +237,9 @@ header {
             left: 0;
             background-color: var(--color-link);
             position: absolute;
-            width: 50px;
+            width: 15px;
             height: 1px;
+            transition: 0.4s ease;
 
             @include b(mobile) {
               display: none;
