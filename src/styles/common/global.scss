@@ -118,6 +118,17 @@ a,
   }
 }
 
+.section {
+  position: relative;
+
+  // .container {
+  //   position: absolute;
+  //   width: 100%;
+  //   left: 0px;
+  //   right: 0px;
+  // }
+}
+
 .form-block {
   &-buttons {
     margin-top: 40px;
